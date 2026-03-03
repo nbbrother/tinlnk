@@ -1,0 +1,35 @@
+
+server:
+  addr: ":8080"
+  mode: "debug"  # debug/release
+  machine_id: 1  # 机器ID，0-1023
+
+mysql:
+  host: "localhost"
+  port: 3306
+  user: "root"
+  password: "root123"
+  database: "tinlink"
+  max_open_conns: 100
+  max_idle_conns: 10
+
+redis:
+  host: "localhost"
+  port: 6379
+  password: ""
+  db: 0
+  pool_size: 100
+  min_idle_conns: 10
+
+rate_limit:
+  qps: 1000
+  burst: 2000
+
+tracing:
+  enabled: true
+  endpoint: "http://jaeger:14268/api/traces"
+  service: "tinlink"
+
+metrics:
+  enabled: true
+  path: "/metrics"
