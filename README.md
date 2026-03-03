@@ -1,5 +1,4 @@
 
-```markdown
 # TinyLink - URL Shortener Service
 
 ## Introduction
